@@ -9,8 +9,14 @@ require('dotenv').config()
 
 app.all('/', (req, res) => {
     console.log("Just got a request!");
+
     console.log(process.env.GOOGLE_KEY);
-    res.jsonp((systemCpuCores) );
+
+
+    console.log(req.query.class);
+
+
+    return res.jsonp((systemCpuCores) );
 });
 
 
